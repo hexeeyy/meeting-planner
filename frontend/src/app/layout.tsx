@@ -1,21 +1,14 @@
 import type { Metadata } from "next";
-import { Inter, Lora } from "next/font/google";
+import { Poppins } from "next/font/google";
 import "./globals.css";
-
-import { cn } from "@/lib/utils"; // classnames helper (optional)
-import { Header } from "@/components/common/Header";
+import { cn } from "@/lib/utils";
 import { Footer } from "@/components/common/Footer";
-//import { Toaster } from "@/components/ui/toaster"; // if using toast notifications
 
-const inter = Inter({
-  variable: "--font-inter",
-  subsets: ["latin"],
-  display: "swap",
-});
-
-const lora = Lora({
-  variable: "--font-lora",
-  subsets: ["latin"],
+const poppins = Poppins({
+  variable: "--font-poppins",
+  subsets: ["latin", "latin-ext"],
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+  style: ["normal", "italic"],
   display: "swap",
 });
 
@@ -35,7 +28,7 @@ export const metadata: Metadata = {
     siteName: "SAFC Scheduler",
     images: [
       {
-        url: "/og-image.png",
+        url: "",
         width: 1200,
         height: 630,
         alt: "SAFC Scheduler",
@@ -54,17 +47,14 @@ export default function RootLayout({
     <html lang="en" className="scroll-smooth">
       <body
         className={cn(
-          "min-h-screen bg-gray-50 text-gray-900 antialiased",
-           inter.variable,
-           lora.variable
+          "flex flex-col min-h-screen bg-gray-50 text-gray-900 antialiased",
+          poppins.variable
         )}
       >
-        <Header />
-        <main className="flex flex-col flex-grow container mx-auto px-4 py-6">
+        <main className="flex-grow container mx-auto px-4 sm:px-6 lg:px-8 py-8">
           {children}
         </main>
         <Footer />
-        {/* <Toaster /> */}
       </body>
     </html>
   );
