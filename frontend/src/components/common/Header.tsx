@@ -44,7 +44,7 @@ export function Header({ drawerOpen, onDrawerToggle, renderDrawerContent }: Head
         sx={{
           width: "100%",
           px: { xs: 2, sm: 3, lg: 4 },
-          py: 2,
+          py: 1.5,
         }}
       >
         <Box sx={{ display: "flex", alignItems: "center", flexGrow: 1 }}>
