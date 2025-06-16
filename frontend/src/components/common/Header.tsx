@@ -29,7 +29,7 @@ export function Header({ drawerOpen, onDrawerToggle, renderDrawerContent }: Head
 
   return (
     <AppBar
-      position="sticky"
+      position="relative"
       elevation={1}
        sx={{
        backgroundColor: "#fff",
