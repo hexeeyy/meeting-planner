@@ -62,8 +62,8 @@ export function Header({ drawerOpen, onDrawerToggle, renderDrawerContent }: Head
             <Image
               src="/images/logo.png"
               alt="SAFC Logo"
-              width={30}
-              height={30}
+              width={35}
+              height={35}
               style={{ marginRight: "1rem" }}
             />
             <Typography

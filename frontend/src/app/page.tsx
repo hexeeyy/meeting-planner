@@ -54,7 +54,6 @@ export default function Home() {
     <>
       <Header navLinks={navLinks} drawerOpen={drawerOpen} onDrawerToggle={toggleDrawer} renderDrawerContent={renderDrawerContent} />
       <div>
-        <h1 className="font-poppins text-4xl font-bold text-center mb-6 text-primary">Meeting Room Scheduler</h1>
         <ErrorDisplay error={error} />
         <div className="flex justify-between mb-4">
           <h2 className="font-poppins text-2xl font-semibold text-secondary">Room Calendar</h2>
